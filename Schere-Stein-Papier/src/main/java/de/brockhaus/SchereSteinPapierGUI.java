@@ -5,13 +5,13 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class RPSGameGUI extends JFrame {
-    private final GegnerKI gegnerKI = new GegnerKI();
+public class SchereSteinPapierGUI extends JFrame {
+    private final SchereSteinPapierRoboterLogik schereSteinPapierRoboterLogik = new SchereSteinPapierRoboterLogik();
     private final JLabel resultLabel = new JLabel("", SwingConstants.CENTER);
     private final JLabel choicesLabel = new JLabel("", SwingConstants.CENTER);
     private static Timer timer;
 
-    public RPSGameGUI() {
+    public SchereSteinPapierGUI() {
         setTitle("Schere Stein Papier");
         setSize(600, 500);
         setMinimumSize(new Dimension(550, 500));
@@ -51,9 +51,9 @@ public class RPSGameGUI extends JFrame {
         scissorsButton.setFont(emojiFont);
         scissorsButton.setPreferredSize(new Dimension(130, 130));
 
-        rockButton.addActionListener(new ChoiceButtonListener(SpielLogik.Choice.ROCK));
-        paperButton.addActionListener(new ChoiceButtonListener(SpielLogik.Choice.PAPER));
-        scissorsButton.addActionListener(new ChoiceButtonListener(SpielLogik.Choice.SCISSORS));
+        rockButton.addActionListener(new ChoiceButtonListener("STEIN"));
+        paperButton.addActionListener(new ChoiceButtonListener("PAPIER"));
+        scissorsButton.addActionListener(new ChoiceButtonListener("SCHERE"));
 
         gbc.gridx = 0;
         buttonPanel.add(rockButton, gbc);
@@ -74,22 +74,22 @@ public class RPSGameGUI extends JFrame {
     }
 
     private class ChoiceButtonListener implements ActionListener {
-        private final SpielLogik.Choice playerChoice;
+        private final String playerChoice;
 
-        public ChoiceButtonListener(SpielLogik.Choice playerChoice) {
+        public ChoiceButtonListener(String playerChoice) {
             this.playerChoice = playerChoice;
         }
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            SpielLogik.Choice robotChoice = gegnerKI.getRandomChoice();
-            String result = SpielLogik.bestimmeGewinner(playerChoice, robotChoice);
+            String robotChoice = schereSteinPapierRoboterLogik.getRandomChoice();
+            String result = SchereSteinPapierSpielLogik.bestimmeGewinnerString(playerChoice, robotChoice);
             resultLabel.setText(result);
             resultLabel.setFont(new Font("Arial", Font.BOLD, 24));
             Color red = new Color(255, 0, 0, 0);
             Color green = new Color(0, 255, 0, 0);
-            resultLabel.setForeground(result.contains("Player") ? green : red);
-            choicesLabel.setText("<html><p>Spieler: " + playerChoice + "</p><p>Roboter: " + robotChoice + "</p></html>");
+            resultLabel.setForeground(SchereSteinPapierSpielLogik.istGewinnerSpieler(playerChoice, robotChoice) ? green : red);
+            choicesLabel.setText(SchereSteinPapierSpielLogik.bestimmeErgebnisString(playerChoice, robotChoice));
             if (timer != null && timer.isRunning()) {
                 timer.stop();
             }
@@ -101,7 +101,7 @@ public class RPSGameGUI extends JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     resultLabel.setForeground(new Color(resultLabel.getForeground().getRed(), resultLabel.getForeground().getGreen(), resultLabel.getForeground().getBlue(), alpha));
-                    alpha += 15;
+                    alpha += 20;
                     if (alpha > 255) {
                         ((Timer) e.getSource()).stop();
                     }
@@ -113,7 +113,7 @@ public class RPSGameGUI extends JFrame {
 
     public static void starte(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            RPSGameGUI gameGUI = new RPSGameGUI();
+            SchereSteinPapierGUI gameGUI = new SchereSteinPapierGUI();
             gameGUI.setVisible(true);
         });
     }

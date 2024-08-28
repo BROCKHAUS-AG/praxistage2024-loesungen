@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35200d4f-64e3-4712-add6-72a0b07f87a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/brockhaus/GegnerKI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/brockhaus/RPSGameGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/brockhaus/SpielLogik.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="35200d4f-64e3-4712-add6-72a0b07f87a2" name="Changes" comment="Schere Stein Papier erste Version. Funktionierende UI mit Spiellogik.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/brockhaus/SchereSteinPapierRoboterLogik.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/brockhaus/SchereSteinPapierSpielLogik.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SchereSteinPapierSpielLogikTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/brockhaus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/brockhaus/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/brockhaus/GegnerKI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/brockhaus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/brockhaus/SchereSteinPapierSpiel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/brockhaus/RPSGameGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/brockhaus/SchereSteinPapierGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/brockhaus/SpielLogik.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../TicTacToe/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TicTacToe/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TicTacToe/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TicTacToe/.idea/vcs.xml" afterDir="false" />
     </list>
@@ -43,12 +43,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.SchereSteinPapierSpielLogikTests.executor": "Run",
+    "JUnit.SpielLogikTests.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jgoldbach/Projekte/praxistage2024/TicTacToe",
+    "last_opened_file_path": "C:/Users/jgoldbach/Projekte/praxistage2024Private/TicTacToe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -57,9 +59,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="de.brockhaus.Main" />
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SchereSteinPapierSpielLogikTests">
+    <configuration name="SchereSteinPapierSpiel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.brockhaus.SchereSteinPapierSpiel" />
       <module name="Schere-Stein-Papier" />
       <extension name="coverage">
         <pattern>
@@ -71,17 +78,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SchereSteinPapierSpielLogikTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Schere-Stein-Papier" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SchereSteinPapierSpielLogikTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SchereSteinPapierSpielLogikTests" />
+        <item itemvalue="Application.SchereSteinPapierSpiel" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
       </set>
     </attachedChunks>
   </component>
@@ -95,7 +112,19 @@
       <updated>1724844384380</updated>
       <workItem from="1724844385498" duration="3900000" />
       <workItem from="1724851342135" duration="314000" />
+      <workItem from="1724851796247" duration="1602000" />
+      <workItem from="1724853682343" duration="73000" />
+      <workItem from="1724854144923" duration="2018000" />
     </task>
+    <task id="LOCAL-00001" summary="Schere Stein Papier erste Version. Funktionierende UI mit Spiellogik.">
+      <option name="closed" value="true" />
+      <created>1724851856646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1724851856646</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,5 +140,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Schere Stein Papier erste Version. Funktionierende UI mit Spiellogik." />
+    <option name="LAST_COMMIT_MESSAGE" value="Schere Stein Papier erste Version. Funktionierende UI mit Spiellogik." />
   </component>
 </project>

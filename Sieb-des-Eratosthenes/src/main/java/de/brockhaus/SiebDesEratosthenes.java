@@ -29,8 +29,8 @@ public class SiebDesEratosthenes {
         zahlen[zahl - 1].streicheDurch();
     }
 
-    private boolean isDurchgestrichen(int zahl) {
-        return zahlen[zahl - 1].isDurchgestrichen();
+    private boolean istDurchgestrichen(int zahl) {
+        return zahlen[zahl - 1].istDurchgestrichen();
     }
 
     private void erstelleArrayUndListe() {
@@ -51,7 +51,7 @@ public class SiebDesEratosthenes {
 
         int a = 2;
         while (a * a <= n) {
-            if (!isDurchgestrichen(a)) {
+            if (!istDurchgestrichen(a)) {
                 durchstreicheVielfache(a);
             }
             a++;
@@ -62,7 +62,7 @@ public class SiebDesEratosthenes {
         // Hier musst du die Primzahlen in die Liste primzahlen schreiben.
 
         for (int i = 1; i <= n; i++) {
-            if (!isDurchgestrichen(i)) {
+            if (!istDurchgestrichen(i)) {
                 primzahlen.add(i);
             }
         }

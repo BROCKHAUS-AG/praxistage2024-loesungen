@@ -14,7 +14,7 @@ public class Zahl {
         return zahl;
     }
 
-    public boolean isDurchgestrichen() {
+    public boolean istDurchgestrichen() {
         return durchgestrichen;
     }
 

@@ -4,13 +4,13 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class PalindromeTest {
-    Main main = new Main();
+    Palindrome palindrome = new PalindromeImpl();
 
     @Test
     public void isPalindromReturnsTrue() {
         var inputNumber = 454;
 
-        var actualOutput = main.isPalindrome(inputNumber);
+        var actualOutput = palindrome.isPalindrome(inputNumber);
 
         assertTrue(actualOutput);
     }
@@ -19,7 +19,7 @@ public class PalindromeTest {
     public void isNotPalindromReturnsFalse() {
         var inputNumber = 1234;
 
-        var actualOutput = main.isPalindrome(inputNumber);
+        var actualOutput = palindrome.isPalindrome(inputNumber);
 
         assertFalse(actualOutput);
     }

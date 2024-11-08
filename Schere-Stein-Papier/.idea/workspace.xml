@@ -33,6 +33,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SchereSteinPapierSpiel.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.SchereSteinPapierSpielLogikTests.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.SpielLogikTests.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -46,6 +47,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -54,7 +58,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SchereSteinPapierSpielLogikTests">
+  <component name="RunManager" selected="Application.SchereSteinPapierSpiel">
     <configuration name="SchereSteinPapierSpiel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.brockhaus.SchereSteinPapierSpiel" />
       <module name="Schere-Stein-Papier" />
@@ -79,16 +83,16 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SchereSteinPapierSpielLogikTests" />
         <item itemvalue="Application.SchereSteinPapierSpiel" />
+        <item itemvalue="JUnit.SchereSteinPapierSpielLogikTests" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +111,9 @@
       <workItem from="1724854144923" duration="2151000" />
       <workItem from="1724856337231" duration="46000" />
       <workItem from="1724912096872" duration="50000" />
+      <workItem from="1724938565107" duration="880000" />
+      <workItem from="1725018578181" duration="1467000" />
+      <workItem from="1728548560334" duration="817000" />
     </task>
     <task id="LOCAL-00001" summary="Schere Stein Papier erste Version. Funktionierende UI mit Spiellogik.">
       <option name="closed" value="true" />
